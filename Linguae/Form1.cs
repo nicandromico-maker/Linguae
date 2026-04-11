@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Linguae
 {
@@ -16,7 +17,7 @@ namespace Linguae
         {
             InitializeComponent();
         }
-
+        string connStr = "Data Source=.;Initial Catalog=LinguaeDB;Integrated Security=True";
         private void pictureBoxCamera_Click(object sender, EventArgs e)
         {
 
@@ -37,29 +38,38 @@ namespace Linguae
         {
             string path = "";
 
-            switch (text.ToLower())
+            using (SqlConnection con = new SqlConnection(connStr))
             {
-                case "hello":
-                    path = "Signs/hello.gif";
-                    break;
+                con.Open();
 
-                case "help":
-                    path = "Signs/help.gif";
-                    break;
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT FilePath FROM Animations WHERE Text = @text", con);
 
-                default:
-                    path = "Signs/default.gif";
-                    break;
+                cmd.Parameters.AddWithValue("@text", text.ToLower());
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    path = result.ToString();
+                }
+                else
+                {
+                    // fallback to default
+                    SqlCommand defaultCmd = new SqlCommand(
+                        "SELECT FilePath FROM Animations WHERE Text = 'default'", con);
+
+                    path = defaultCmd.ExecuteScalar().ToString();
+                }
+
+                con.Close();
             }
 
             string fullPath = System.IO.Path.Combine(Application.StartupPath, path);
+
             if (System.IO.File.Exists(fullPath))
             {
                 pictureBoxSign.Image = Image.FromFile(fullPath);
-            }
-            else
-            {
-                MessageBox.Show("File not found: " + fullPath);
             }
         }
 
