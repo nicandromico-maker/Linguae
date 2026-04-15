@@ -34,6 +34,7 @@
             this.buttonSend = new System.Windows.Forms.Button();
             this.pictureBoxSign = new System.Windows.Forms.PictureBox();
             this.pictureBoxInfo = new System.Windows.Forms.PictureBox();
+            this.panelStickman = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSign)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxInfo)).BeginInit();
@@ -44,7 +45,7 @@
             this.pictureBoxCamera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxCamera.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
-            this.pictureBoxCamera.Size = new System.Drawing.Size(1095, 418);
+            this.pictureBoxCamera.Size = new System.Drawing.Size(1690, 418);
             this.pictureBoxCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCamera.TabIndex = 0;
             this.pictureBoxCamera.TabStop = false;
@@ -73,7 +74,7 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(449, 476);
+            this.buttonSend.Location = new System.Drawing.Point(6, 515);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(75, 23);
             this.buttonSend.TabIndex = 3;
@@ -83,7 +84,7 @@
             // 
             // pictureBoxSign
             // 
-            this.pictureBoxSign.Location = new System.Drawing.Point(901, 418);
+            this.pictureBoxSign.Location = new System.Drawing.Point(1496, 424);
             this.pictureBoxSign.Name = "pictureBoxSign";
             this.pictureBoxSign.Size = new System.Drawing.Size(194, 146);
             this.pictureBoxSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,12 +93,20 @@
             // 
             // pictureBoxInfo
             // 
-            this.pictureBoxInfo.Location = new System.Drawing.Point(705, 418);
+            this.pictureBoxInfo.Location = new System.Drawing.Point(1300, 424);
             this.pictureBoxInfo.Name = "pictureBoxInfo";
             this.pictureBoxInfo.Size = new System.Drawing.Size(190, 146);
             this.pictureBoxInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInfo.TabIndex = 5;
             this.pictureBoxInfo.TabStop = false;
+            // 
+            // panelStickman
+            // 
+            this.panelStickman.Location = new System.Drawing.Point(994, 424);
+            this.panelStickman.Name = "panelStickman";
+            this.panelStickman.Size = new System.Drawing.Size(300, 300);
+            this.panelStickman.TabIndex = 6;
+            this.panelStickman.Paint += new System.Windows.Forms.PaintEventHandler(this.panelStickman_Paint);
             // 
             // Form1
             // 
@@ -105,7 +114,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1095, 565);
+            this.ClientSize = new System.Drawing.Size(1690, 821);
+            this.Controls.Add(this.panelStickman);
             this.Controls.Add(this.pictureBoxInfo);
             this.Controls.Add(this.pictureBoxSign);
             this.Controls.Add(this.buttonSend);
@@ -132,6 +142,7 @@
         private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.PictureBox pictureBoxSign;
         private System.Windows.Forms.PictureBox pictureBoxInfo;
+        private System.Windows.Forms.Panel panelStickman;
     }
 }
 
