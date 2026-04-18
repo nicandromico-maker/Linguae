@@ -43,8 +43,9 @@
             // 
             this.pictureBoxCamera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBoxCamera.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxCamera.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
-            this.pictureBoxCamera.Size = new System.Drawing.Size(1095, 418);
+            this.pictureBoxCamera.Size = new System.Drawing.Size(821, 340);
             this.pictureBoxCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCamera.TabIndex = 0;
             this.pictureBoxCamera.TabStop = false;
@@ -57,25 +58,28 @@
             this.labelSubtitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelSubtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubtitle.ForeColor = System.Drawing.Color.White;
-            this.labelSubtitle.Location = new System.Drawing.Point(0, 418);
+            this.labelSubtitle.Location = new System.Drawing.Point(0, 340);
+            this.labelSubtitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSubtitle.Name = "labelSubtitle";
-            this.labelSubtitle.Size = new System.Drawing.Size(453, 36);
+            this.labelSubtitle.Size = new System.Drawing.Size(377, 29);
             this.labelSubtitle.TabIndex = 1;
             this.labelSubtitle.Text = "Detected sign will appear here.";
             // 
             // textBoxChat
             // 
-            this.textBoxChat.Location = new System.Drawing.Point(6, 476);
+            this.textBoxChat.Location = new System.Drawing.Point(4, 387);
+            this.textBoxChat.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxChat.Name = "textBoxChat";
-            this.textBoxChat.Size = new System.Drawing.Size(420, 22);
+            this.textBoxChat.Size = new System.Drawing.Size(316, 20);
             this.textBoxChat.TabIndex = 2;
             this.textBoxChat.TextChanged += new System.EventHandler(this.textBoxChat_TextChanged);
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(449, 476);
+            this.buttonSend.Location = new System.Drawing.Point(337, 387);
+            this.buttonSend.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(75, 23);
+            this.buttonSend.Size = new System.Drawing.Size(56, 19);
             this.buttonSend.TabIndex = 3;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = true;
@@ -83,35 +87,38 @@
             // 
             // pictureBoxSign
             // 
-            this.pictureBoxSign.Location = new System.Drawing.Point(901, 418);
+            this.pictureBoxSign.Location = new System.Drawing.Point(676, 340);
+            this.pictureBoxSign.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxSign.Name = "pictureBoxSign";
-            this.pictureBoxSign.Size = new System.Drawing.Size(194, 146);
+            this.pictureBoxSign.Size = new System.Drawing.Size(146, 119);
             this.pictureBoxSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSign.TabIndex = 4;
             this.pictureBoxSign.TabStop = false;
             // 
             // pictureBoxInfo
             // 
-            this.pictureBoxInfo.Location = new System.Drawing.Point(705, 418);
+            this.pictureBoxInfo.Location = new System.Drawing.Point(529, 340);
+            this.pictureBoxInfo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxInfo.Name = "pictureBoxInfo";
-            this.pictureBoxInfo.Size = new System.Drawing.Size(190, 146);
+            this.pictureBoxInfo.Size = new System.Drawing.Size(142, 119);
             this.pictureBoxInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxInfo.TabIndex = 5;
             this.pictureBoxInfo.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1095, 565);
+            this.ClientSize = new System.Drawing.Size(821, 459);
             this.Controls.Add(this.pictureBoxInfo);
             this.Controls.Add(this.pictureBoxSign);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.textBoxChat);
             this.Controls.Add(this.labelSubtitle);
             this.Controls.Add(this.pictureBoxCamera);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
