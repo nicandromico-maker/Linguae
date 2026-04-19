@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ASL_Alphabet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ASL_Alphabet.Designer.cs">
+      <DependentUpon>ASL_Alphabet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Colors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ASL_Alphabet.resx">
+      <DependentUpon>ASL_Alphabet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Colors.resx">
       <DependentUpon>Colors.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +117,34 @@
     <None Include="Resources\white.jpg" />
     <None Include="Resources\brown.jpg" />
     <None Include="Resources\Black.jpg" />
+    <None Include="Resources\Alphabet.jpg" />
+    <None Include="Resources\Aa.jpg" />
+    <None Include="Resources\Alphabetthumbnail.jpg" />
+    <None Include="Resources\f.jpg" />
+    <None Include="Resources\e.jpg" />
+    <None Include="Resources\d.jpg" />
+    <None Include="Resources\b.jpg" />
+    <None Include="Resources\c.jpg" />
+    <None Include="Resources\m.jpg" />
+    <None Include="Resources\k.jpg" />
+    <None Include="Resources\l.jpg" />
+    <None Include="Resources\j.jpg" />
+    <None Include="Resources\i.jpg" />
+    <None Include="Resources\h.jpg" />
+    <None Include="Resources\g.jpg" />
+    <None Include="Resources\z.jpg" />
+    <None Include="Resources\y.jpg" />
+    <None Include="Resources\x.jpg" />
+    <None Include="Resources\w.jpg" />
+    <None Include="Resources\v.jpg" />
+    <None Include="Resources\u.jpg" />
+    <None Include="Resources\t.jpg" />
+    <None Include="Resources\s.jpg" />
+    <None Include="Resources\r.jpg" />
+    <None Include="Resources\q.jpg" />
+    <None Include="Resources\p.jpg" />
+    <None Include="Resources\o.jpg" />
+    <None Include="Resources\n.jpg" />
     <Content Include="Signs\hello.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
